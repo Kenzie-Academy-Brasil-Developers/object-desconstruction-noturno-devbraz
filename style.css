@@ -1,0 +1,42 @@
+body {
+
+    background-color: gainsboro;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.display-results {
+
+    padding: 10px;
+    border-radius: 10px;
+    width: 600px;
+    border: 1px solid slategray;
+
+}
+
+.button-kata {
+
+    margin-top: 20px;
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.button-kata button {
+
+    margin: 10px 0;
+    height: 30px;
+    width: 80px;
+
+}
+
+.button-kata button:hover {
+
+    cursor:pointer
+    
+}
