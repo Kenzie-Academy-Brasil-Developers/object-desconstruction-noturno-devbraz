@@ -51,7 +51,7 @@ function showResults(arr, title) {
 const filterPrice = (array) => {
     console.log(array)
     const result = array.filter(({price}) => {
-         return price > 3.00})
+         return {...price > 3.00}})
          
         showResults(result, 'Filtro de Preço') 
 
@@ -85,15 +85,11 @@ buttonPriceMap.addEventListener('click', () => priceMap(itemArray))
 
 const padariaReduce = (array) => {
 
-    const totalList = array.reduce((acc, {quantity, section}) => {{
-
-        if(section === 'Padaria'){
-            acc += quantity
-        }
-
-        return acc   
-         
-    }}, 0)
+    const totalList = array.filter(({section}) => {
+        return section === 'Padaria'}).reduce((acc, {quantity, price}) => {
+            acc = price + quantity
+            return acc 
+    }, 0)
 
     showResults(totalList, 'Soma de Itens, Padaria')
 
